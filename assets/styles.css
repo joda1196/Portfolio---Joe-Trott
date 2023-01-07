@@ -76,6 +76,16 @@ html {
   border-radius: 40px;
   background-color: #efe4d8;
 }
+.contact img {
+  width: 50px;
+  height: auto;
+}
+#attribute {
+  float: right;
+  font-size: smaller;
+  color: grey;
+  text-decoration: none;
+}
 
 @media screen and (max-width: 850px) {
   .header-text {
