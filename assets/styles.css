@@ -1,8 +1,4 @@
 html {
-  /* background: linear-gradient(#121420, transparent),
-    linear-gradient(to top left, #1b2432, transparent),
-    linear-gradient(to top right, #2c2b3c, transparent);
-  background-blend-mode: screen; */
   background: #f5ebe0;
 }
 * {
@@ -19,15 +15,12 @@ html {
 .navbar a {
   padding: 1em;
   text-decoration: none;
-  float: right;
   color: #313138;
+  float: right;
 }
 .navbar a:hover {
   background-color: rgba(130, 154, 180, 0.527);
   color: rgb(37, 64, 96);
-}
-#joe-trott {
-  float: left;
 }
 /* ----------Banner---------- */
 .header-under-nav {
@@ -36,6 +29,8 @@ html {
   border-style: solid;
   border-top-width: 1px;
   border-bottom-width: 1px;
+  border-right-style: none;
+  border-left-style: none;
   border-color: #403f4c;
   width: 100%;
   height: auto;
@@ -72,13 +67,19 @@ html {
 .content section {
   margin: 2em;
   padding: 2em;
-  height: 100%;
   border-radius: 40px;
   background-color: #efe4d8;
 }
+
+/* -----------Contact Info-------- */
 .contact img {
-  width: 50px;
+  width: 30px;
   height: auto;
+  padding: 0.25em;
+}
+.contact a {
+  text-decoration: none;
+  color: #313138;
 }
 #attribute {
   float: right;
@@ -90,6 +91,8 @@ html {
 @media screen and (max-width: 850px) {
   .navbar {
     display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
   }
   .header-container {
     display: block;
@@ -98,5 +101,23 @@ html {
     display: inline-block;
     align-self: flex-end;
     text-align: center;
+  }
+  .content section {
+    padding: 1em;
+    margin: 0.5em;
+  }
+  .content h3 {
+    text-align: center;
+    line-height: 2em;
+  }
+  .contact {
+    text-align: center;
+  }
+  .contact a {
+    display: flex;
+    align-items: center;
+  }
+  .contact img {
+    padding: 1em;
   }
 }
