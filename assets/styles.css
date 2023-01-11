@@ -102,6 +102,7 @@ html {
   color: grey;
 }
 
+/* Mobile */
 @media screen and (max-width: 850px) {
   .navbar {
     display: flex;
