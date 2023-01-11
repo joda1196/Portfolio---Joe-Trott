@@ -28,7 +28,7 @@ html {
 }
 .navbar a {
   padding: 1em;
-  padding-inline: 4em;
+  padding-inline: 3em;
   text-decoration: none;
   color: #313138;
 }
@@ -36,6 +36,7 @@ html {
   background-color: rgba(235, 240, 246, 0.943);
   color: rgb(59, 132, 222);
   transition: 0.5s 0s ease;
+  transform: scale(1.01) translateY(-3px);
 }
 /* ----------Banner---------- */
 .header-under-nav {
@@ -84,34 +85,80 @@ html {
     rgba(193, 199, 207, 0.502) 100%
   );
 }
-
+#skill-logo-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 2em;
+  justify-content: center;
+  align-items: center;
+}
+.skill-logo {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(201, 216, 222);
+  background: radial-gradient(
+    circle,
+    rgb(188, 202, 211) 0%,
+    rgba(204, 208, 212, 0.502) 100%
+  );
+  width: 75px;
+  height: 75px;
+  margin: 0.5em;
+  padding: 1em;
+  border-radius: 1em;
+  font-size: 1em;
+}
+.skill-logo :hover {
+  transform: scale(1.01) translateY(-3px);
+  transition: 0.5s ease;
+}
+.skill-logo img {
+  width: 75px;
+  height: 75px;
+}
 /* -----------Contact Info-------- */
 .contact img {
-  width: 30px;
+  width: 40px;
   height: auto;
-  padding: 0.25em;
+  padding: 1em;
+  padding-right: 0.25em;
 }
 .contact a {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: #313138;
 }
+.contact-logos {
+  display: flex;
+  justify-content: center;
+  flex-flow: row;
+  height: fit-content;
+  position: relative;
+  right: 2em;
+}
 #attribute {
   margin-right: 1em;
-  float: right;
+  text-align: center;
   font-size: smaller;
   color: grey;
 }
 
-/* Mobile */
+/* ----------Mobile---------- */
 @media screen and (max-width: 850px) {
+  /* Navigation */
   .navbar {
     display: flex;
     justify-content: center;
     flex-direction: row-reverse;
   }
   .navbar a {
-    padding-inline: 1em;
+    padding-inline: 0.75em;
   }
+  /* Header */
   .header-container {
     display: block;
   }
@@ -122,6 +169,7 @@ html {
     margin-top: 0;
     margin-bottom: 1em;
   }
+  /* Content */
   .content section {
     padding: 1.5em;
     margin: 1em;
@@ -132,6 +180,12 @@ html {
   }
   .contact {
     text-align: center;
+  }
+  .contact-logos {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    left: 2em;
   }
   .contact a {
     display: flex;
