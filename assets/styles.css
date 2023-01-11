@@ -1,5 +1,11 @@
 html {
-  background: #f5ebe0;
+  background: rgb(3, 45, 76);
+  background: linear-gradient(
+    90deg,
+    rgb(5, 29, 46) 0%,
+    rgb(9, 54, 54) 35%,
+    rgba(30, 38, 80, 1) 100%
+  );
 }
 * {
   margin: 0;
@@ -8,35 +14,37 @@ html {
 }
 /* ----------Navigation---------- */
 .navbar {
-  display: inline;
+  display: flex;
   font-size: 1em;
   margin: 0;
+  justify-content: center;
+  flex-direction: row-reverse;
+  background: rgb(141, 176, 190);
+  background: radial-gradient(
+    circle,
+    rgb(188, 202, 211) 0%,
+    rgba(193, 199, 207, 0.502) 100%
+  );
 }
 .navbar a {
   padding: 1em;
+  padding-inline: 4em;
   text-decoration: none;
   color: #313138;
-  float: right;
 }
 .navbar a:hover {
-  background-color: rgba(130, 154, 180, 0.527);
-  color: rgb(37, 64, 96);
+  background-color: rgba(235, 240, 246, 0.943);
+  color: rgb(59, 132, 222);
+  transition: 0.5s 0s ease;
 }
 /* ----------Banner---------- */
 .header-under-nav {
   display: flex;
-  background: #efe4d8;
-  border-style: solid;
-  border-top-width: 1px;
-  border-bottom-width: 1px;
-  border-right-style: none;
-  border-left-style: none;
-  border-color: #403f4c;
   width: 100%;
   height: auto;
   text-align: center;
   font-size: 1.5em;
-  color: #313138;
+  color: #d6d6dc;
 }
 .header-container {
   margin: auto;
@@ -49,9 +57,10 @@ html {
   display: block;
   text-align: left;
   margin: 1em;
+  margin-bottom: 0;
 }
 #placeholder {
-  width: 100px;
+  width: 240px;
   height: auto;
   margin: 1em;
   object-fit: contain;
@@ -61,14 +70,19 @@ html {
   font-size: 1em;
   color: #313138;
   overflow: hidden;
-  max-width: 38em;
+  max-width: 42em;
   margin: auto;
 }
 .content section {
   margin: 2em;
   padding: 2em;
   border-radius: 40px;
-  background-color: #efe4d8;
+  background: rgb(173, 186, 191);
+  background: radial-gradient(
+    circle,
+    rgb(188, 202, 211) 0%,
+    rgba(193, 199, 207, 0.502) 100%
+  );
 }
 
 /* -----------Contact Info-------- */
@@ -82,10 +96,10 @@ html {
   color: #313138;
 }
 #attribute {
+  margin-right: 1em;
   float: right;
   font-size: smaller;
   color: grey;
-  text-decoration: none;
 }
 
 @media screen and (max-width: 850px) {
@@ -94,6 +108,9 @@ html {
     justify-content: center;
     flex-direction: row-reverse;
   }
+  .navbar a {
+    padding-inline: 1em;
+  }
   .header-container {
     display: block;
   }
@@ -101,10 +118,12 @@ html {
     display: inline-block;
     align-self: flex-end;
     text-align: center;
+    margin-top: 0;
+    margin-bottom: 1em;
   }
   .content section {
-    padding: 1em;
-    margin: 0.5em;
+    padding: 1.5em;
+    margin: 1em;
   }
   .content h3 {
     text-align: center;
