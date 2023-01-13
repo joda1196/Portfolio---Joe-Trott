@@ -84,6 +84,7 @@ html {
     rgb(188, 202, 211) 0%,
     rgba(193, 199, 207, 0.502) 100%
   );
+  font-weight: bold;
 }
 .project-container {
   text-align: center;
@@ -186,7 +187,7 @@ html {
     flex-direction: row-reverse;
   }
   .navbar a {
-    padding-inline: 0.75em;
+    padding-inline: 0.5em;
   }
   /* Header */
   .header-container {
