@@ -85,6 +85,32 @@ html {
     rgba(193, 199, 207, 0.502) 100%
   );
 }
+.projects {
+  display: inline-block;
+  align-self: flex-end;
+  text-align: center;
+}
+.projects a {
+  width: 250px;
+  height: auto;
+}
+.projects a img {
+  width: 250px;
+  height: auto;
+  background: rgb(201, 216, 222);
+  background: radial-gradient(
+    circle,
+    rgb(188, 202, 211) 0%,
+    rgba(204, 208, 212, 0.502) 100%
+  );
+  border-radius: 20px;
+  margin: 1em;
+  padding: 0.5em;
+}
+.projects img:hover {
+  transition: 0.5s 0s ease;
+  transform: scale(1.01) translateY(-3px);
+}
 #skill-logo-container {
   display: flex;
   flex-direction: row;
@@ -108,7 +134,7 @@ html {
   height: 75px;
   margin: 0.5em;
   padding: 1em;
-  border-radius: 1em;
+  border-radius: 20px;
   font-size: 1em;
 }
 .skill-logo :hover {
