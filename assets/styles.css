@@ -1,5 +1,5 @@
 html {
-  background: rgb(3, 45, 76);
+  background: rgb(3, 45, 76) cover scroll;
   background: linear-gradient(
     90deg,
     rgb(5, 29, 46) 0%,
@@ -71,7 +71,7 @@ html {
   font-size: 1em;
   color: #313138;
   overflow: hidden;
-  max-width: 42em;
+  max-width: 43em;
   margin: auto;
 }
 .content section {
