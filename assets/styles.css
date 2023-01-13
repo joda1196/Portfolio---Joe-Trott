@@ -85,9 +85,7 @@ html {
     rgba(193, 199, 207, 0.502) 100%
   );
 }
-.projects {
-  display: inline-block;
-  align-self: flex-end;
+.project-container {
   text-align: center;
 }
 .projects a {
