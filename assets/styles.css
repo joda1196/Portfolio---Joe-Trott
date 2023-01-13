@@ -159,6 +159,11 @@ html {
   text-decoration: none;
   color: #313138;
 }
+.contact a:hover {
+  transition: 0.5s 0s ease;
+  transform: scale(1.01) translateY(-3px);
+  color: whitesmoke;
+}
 .contact-logos {
   display: flex;
   justify-content: center;
