@@ -110,6 +110,7 @@ html {
 .projects img:hover {
   transition: 0.5s 0s ease;
   transform: scale(1.01) translateY(-3px);
+  background: whitesmoke;
 }
 #skill-logo-container {
   display: flex;
