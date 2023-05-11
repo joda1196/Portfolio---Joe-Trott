@@ -1,154 +1,418 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets\images\apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets\images\favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets\images\favicon-16x16.png"
-    />
-    <link rel="manifest" href="assets\images\site.webmanifest" />
-    <link rel="stylesheet" href="assets\styles.css" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
-    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Joe Trott</title>
+    <link rel="icon" type="image/x-icon" href="assets\images\favicon.ico" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets\styles.css" />
   </head>
-  <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-      <a href="#contact"> <b>Contact</b> </a>
-      <a href="#aboutme"> <b>About</b> </a>
-      <a href="#skills"> <b>Skills</b> </a>
-      <a href="#projects"> <b>Projects</b> </a>
-      <a href="."><b>Home</b></a>
-    </nav>
-    <!-- Banner with Profile Image -->
-    <header class="header-under-nav">
-      <div class="header-container">
-        <img
-          id="placeholder"
-          src="assets\images\Joe-Trott-Headshot.jpg"
-          alt="placeholder"
-        />
-        <div class="header-text">
-          <h1>Joe Trott</h1>
-          <p>Upcoming Software Developer</p>
+  <body
+    class="bg-dark"
+    data-spy="scroll"
+    data-target=".navbar"
+    data-offset="40"
+    id="home"
+  >
+    <!--------------------------------- Navigation --------------------------------->
+    <nav class="navbar fixed-top navbar-expand-lg bg-light">
+      <div class="container-fluid nav-settings">
+        <a class="navbar-brand" href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="26"
+            height="26"
+            fill="currentColor"
+            class="bi bi-house"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"
+            />
+          </svg>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <button type="button" class="btn btn-primary btn-md">
+              <a class="link-underline-opacity-0 link-light" href="/assets/images/Joe Trott Resume 2023 V2 (1).pdf" target="_blank">Resume</a>
+            </button>
+          </ul>
         </div>
       </div>
-    </header>
-    <!-- Content -->
-    <div class="content">
-      <section id="aboutme" class="about-me">
-        <h3>About me</h3>
-        <p>
-          Welcome to my Portfolio! I began attending Base Camp Coding Academy
-          Graduate Institute in September 2022 to spend 11 months undergoing
-          intense preparation for entry into software development. Outside of
-          work I'm a music and guitar enthusiast.
-        </p>
-      </section>
-      <section id="projects" class="projects">
-        <h3>Projects</h3>
-        <div class="project-container">
-          <a
-            href="https://replit.com/@JoeT10/Math-Monster?v=1"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><img src="assets\images\Math Monster.jpg" alt="Math Monster"
-          /></a>
-          <h4>Math Monster</h4>
-          <a
-            href="https://replit.com/@JoeT10/CAJE-Library?v=1"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><img src="assets\images\CAJE Library.jpg" alt="CAJE Library"
-          /></a>
-          <h4>C.A.J.E Library</h4>
-        </div>
-      </section>
-      <section id="skills" class="skills">
-        <h3>Skills</h3>
-        <div id="skill-logo-container">
-          <div class="skill-logo">
-            <img src="assets\images\pythonoutline.png" alt="python-logo" />
-            Python
+    </nav>
+    <!--------------------------------- About Me --------------------------------->
+    <section id="about" class="section py-5 custom-bg">
+      <div class="container mt-5">
+        <div class="row text-center text-md-left">
+          <div class="col-md-3">
+            <img
+              src="assets\images\joetrott.jpg"
+              alt="headshot"
+              class="img-thumbnail mb-4 mt-5"
+            />
           </div>
-          <div class="skill-logo">
-            <img src="assets\images\htmlcss.png" alt="htmlcss-logo" />
-            HTML CSS
-          </div>
-          <div class="skill-logo">
-            <img src="assets\images\javascript.png" alt="js-logo" />
-            Javascript
-          </div>
-          <div class="skill-logo">
-            <img src="assets\images\django.png" alt="django-logo" />
-          </div>
-          <div class="skill-logo">
-            <img src="assets\images\java.png" alt="java-logo" />
-            Java
-          </div>
-          <div class="skill-logo">
-            <img src="assets\images\spring.png" alt="spring-logo" />
-            Spring
-          </div>
-          <div class="skill-logo">
-            <img src="assets\images\git.png" alt="git-logo" />
-            Git
-          </div>
-          <div class="skill-logo">
-            <img src="assets\images\photoshop.png" alt="photoshop-logo" />
+          <div class="pl-md-4 col-md-9">
+            <h1 class="title mt-5">Joe Trott</h1>
+            <p class="subtitle custom-text">Full Stack Developer</p>
+            <p class="subtitle custom-text">
+              Welcome to my Portfolio! I began attending Base Camp Coding
+              Academy Graduate Institute in September 2022 to spend 11 months
+              undergoing intense preparation for entry into software
+              development. Outside of work I'm a music and guitar enthusiast.
+            </p>
           </div>
         </div>
-      </section>
-      <section id="contact" class="contact">
-        <h3>Contact</h3>
-        <div class="contact-logos">
-          <a
-            href="mailto:jhtrott629@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><img src="assets\images\email.png" alt="Email" />
-            jhtrott629@gmail.com</a
-          >
-          <a
-            href="https://github.com/joda1196"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><img src="assets\images\github.png" alt="Github" />joda1196</a
-          >
-          <a
-            href="https://www.linkedin.com/in/joe-trott-8944621a3/"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><img src="assets\images\linkedin-logo.png" alt="Linkedin" />Joe
-            Trott</a
-          >
-          <a
-            href="assets\images\Joe Trott Resume 2023.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="assets\images\resume.png" alt="resume" /> Resume</a
-          >
+      </div>
+    </section>
+
+    <!--------------------------------- Skills --------------------------------->
+    <section id="skills" class="section py-5">
+      <div class="container text-center">
+        <h4 class="section-title mb-4">My Skills</h4>
+        <div class="row">
+          <!-- Python -->
+          <div class="col-sm-6 col-md-3 mb-4">
+            <div class="custom-card card py-5">
+              <div class="card-body">
+                <img src="." alt="" />
+                <h5>Python</h5>
+              </div>
+            </div>
+          </div>
+          <!-- HTML -->
+          <div class="col-sm-6 col-md-3 mb-4">
+            <div class="custom-card card py-5">
+              <div class="card-body">
+                <img src="." alt="" />
+                <h5>HTML</h5>
+              </div>
+            </div>
+          </div>
+          <!-- CSS -->
+          <div class="col-sm-6 col-md-3 mb-4">
+            <div class="custom-card card py-5">
+              <div class="card-body">
+                <img src="." alt="" />
+                <h5>CSS</h5>
+              </div>
+            </div>
+          </div>
+          <!-- Bootstrap -->
+          <div class="col-sm-6 col-md-3 mb-4">
+            <div class="custom-card card py-5">
+              <div class="card-body">
+                <img src="." alt="" />
+                <h5>Bootstrap</h5>
+              </div>
+            </div>
+          </div>
+          <!-- Git -->
+          <div class="col-sm-6 col-md-3 mb-4">
+            <div class="custom-card card py-5">
+              <div class="card-body">
+                <img src="." alt="" />
+                <h5>Git</h5>
+              </div>
+            </div>
+          </div>
+          <!-- Django -->
+          <div class="col-sm-6 col-md-3 mb-4">
+            <div class="custom-card card py-5">
+              <div class="card-body">
+                <img src="." alt="" />
+                <h5>Django</h5>
+              </div>
+            </div>
+          </div>
+          <!-- Java Script -->
+          <div class="col-sm-6 col-md-3 mb-4">
+            <div class="custom-card card py-5">
+              <div class="card-body">
+                <img src="." alt="" />
+                <h5>Java Script</h5>
+              </div>
+            </div>
+          </div>
+          <!-- Java -->
+          <div class="col-sm-6 col-md-3 mb-4">
+            <div class="custom-card card py-5">
+              <div class="card-body">
+                <img src="." alt="" />
+                <h5>Java</h5>
+              </div>
+            </div>
+          </div>
+          <!-- SQL -->
+          <div class="col-sm-6 col-md-3 mb-4">
+            <div class="custom-card card py-5">
+              <div class="card-body">
+                <img src="." alt="" />
+                <h5>SQL</h5>
+              </div>
+            </div>
+          </div>
+          <!-- Spring -->
+          <div class="col-sm-6 col-md-3 mb-4">
+            <div class="custom-card card py-5">
+              <div class="card-body">
+                <img src="." alt="" />
+                <h5>Spring</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 mb-4">
+            <div class="custom-card card py-5">
+              <div class="card-body">
+                <img src="." alt="" />
+                <h5>Ps</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--------------------------------- Projects --------------------------------->
+    <section id="projects" class="section py-5 custom-bg">
+      <div class="container text-center">
+        <h4 class="section-title mb-4" style="color: black">Projects</h4>
+        <div class="row text-middle">
+          <!-- Math Monster -->
+          <div class="col-md-4">
+            <div class="custom-card card border mb-4">
+              <img src="." alt="" class="card-img-top w-100" />
+              <div class="card-body">
+                <h5 class="card-title">Math Monster</h5>
+                <img
+                  src="assets\images\Math Monster.png"
+                  alt=""
+                  class="img-thumbnail"
+                />
+                <h12>Python Group Project</h12>
+                <p>
+                  This project is turn based math game where the player must use
+                  their arithmetic skills to defeat bosses. The player can also
+                  explore rooms and find loot that can be stored into an
+                  inventory.
+                </p>
+                <a
+                  class="- btn btn-primary rounded ml-4"
+                  target="_blank"
+                  href="https://replit.com/@JoeT10/Math-Monster?v=1"
+                  >Launch Project</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- CAJE Library -->
+          <div class="col-md-4">
+            <div class="custom-card card border mb-4">
+              <img src="." alt="" class="card-img-top w-100" />
+              <div class="card-body">
+                <h5 class="card-title">CAJE Library</h5>
+                <img
+                  src="assets\images\CAJE.png"
+                  alt=""
+                  class="img-thumbnail"
+                />
+                <h12>Python Group Project</h12>
+                <p>
+                  A Library simulation which features authentication and full
+                  functionality for checking in, checking checkout, addition,
+                  and updating books.
+                </p>
+                <a
+                  class="- btn btn-primary rounded ml-4"
+                  target="_blank"
+                  href="https://replit.com/@JoeT10/CAJE-Library?v=1"
+                  >Launch Project</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Recipe Blog -->
+          <div class="col-md-4">
+            <div class="custom-card card border mb-4">
+              <img src="." alt="" class="card-img-top w-100" />
+              <div class="card-body">
+                <h5 class="card-title">Recipe Blog</h5>
+                <h12>Django Group Project</h12>
+                <p>
+                  A food blog with full authentication Python, SQLite, HTML, and
+                  CSS.
+                </p>
+                <a
+                  class="- btn btn-primary rounded ml-4"
+                  target="_blank"
+                  href="https://github.com/joda1196/food-blog"
+                  >Source Code</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--------------------------------- Contact --------------------------------->
+    <footer>
+      <section id="contact" class="position-relative section py-5">
+        <div class="container text-center">
+          <h4 class="section-title mb-4">Contact Me!</h4>
+          <div class="row">
+            <!-- GitHub -->
+            <div class="col-sm-6 col-md-3 mb-4">
+              <div class="custom-card card">
+                <a
+                  class="contact-link"
+                  href="https://github.com/joda1196"
+                  target="_blank"
+                >
+                  <div class="card-body py-5">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="currentColor"
+                      class="bi bi-github"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                      />
+                    </svg>
+                    <h5>GitHub</h5>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- Email -->
+            <div class="col-sm-6 col-md-3 mb-4">
+              <div class="custom-card card">
+                <a
+                  class="contact-link"
+                  href="mailto: jhtrott629@gmail.com"
+                  target="_blank"
+                >
+                  <div class="card-body py-5">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="currentColor"
+                      class="bi bi-envelope"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"
+                      />
+                    </svg>
+                    <h5>jhtrott629@gmail.com</h5>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- Linkedin -->
+            <div class="col-sm-6 col-md-3 mb-4">
+              <div class="custom-card card">
+                <a
+                  class="contact-link"
+                  href="https://www.linkedin.com/in/joetrott/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3Bn2kEtn2SSWmuqfgP15HZvg%3D%3D"
+                  target="_blank"
+                >
+                  <div class="card-body py-5">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="currentColor"
+                      class="bi bi-linkedin"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+                      />
+                    </svg>
+                    <h5>Linkedin</h5>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- Location -->
+            <div class="col-sm-6 col-md-3 mb-4">
+              <div class="custom-card card">
+                <a
+                  class="contact-link"
+                  href="https://www.google.com/maps/place/Oxford,+MS+38655/data=!4m2!3m1!1s0x88807b6ff0a7a1d9:0x76e49b3232dbaf1d?sa=X&ved=2ahUKEwjXgMv8nuv-AhV9kmoFHULRBnIQ8gF6BAgNEAI"
+                  target="_blank"
+                >
+                  <div class="card-body py-5">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="currentColor"
+                      class="bi bi-geo-alt"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"
+                      />
+                      <path
+                        d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+                      />
+                    </svg>
+                    <h5>Location</h5>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-    </div>
-    <p id="attribute">Developed by Joe Trott</p>
+      <p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105407.85118122581!2d-89.53580799999999!3d34.35059644999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88807b6ff0a7a1d9%3A0x76e49b3232dbaf1d!2sOxford%2C%20MS%2038655!5e0!3m2!1sen!2sus!4v1683734531732!5m2!1sen!2sus"
+          width="900"
+          height="450"
+          style="border: 0; width: 100%"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="map"
+        ></iframe>
+      </p>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
